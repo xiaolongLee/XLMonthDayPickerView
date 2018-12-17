@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TFMonthDayPickerViewController">
+            <connections>
+                <outlet property="monthDayPickerView" destination="35W-oE-BMA" id="sfs-MU-VGH"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="35W-oE-BMA" customClass="TFMonthDayPickerView">
+                    <rect key="frame" x="0.0" y="451" width="375" height="216"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="216" id="HV3-XU-P1M"/>
+                    </constraints>
+                </pickerView>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="35W-oE-BMA" secondAttribute="bottom" id="9gF-NN-lMc"/>
+                <constraint firstAttribute="trailing" secondItem="35W-oE-BMA" secondAttribute="trailing" id="cgB-19-nIs"/>
+                <constraint firstItem="35W-oE-BMA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="qHJ-FM-5h4"/>
+            </constraints>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="UtT-Lb-SMx" appends="YES" id="Fxe-XQ-GxZ"/>
+            </connections>
+        </view>
+        <tapGestureRecognizer id="UtT-Lb-SMx">
+            <connections>
+                <action selector="clickBlanket:" destination="-1" id="ra3-QD-Hye"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+</document>
